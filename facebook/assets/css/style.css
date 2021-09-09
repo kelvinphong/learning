@@ -1,0 +1,318 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: #18191a;
+}
+
+.navbar-h {
+  height: var(--header-height);
+}
+
+.d-left {
+  width: 320px;
+}
+
+.navbar {
+  background-color: var(--soc-header-bg);
+}
+.navbar .nav-block {
+  position: fixed;
+}
+.navbar .navbar-left {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.navbar .navbar-left .logo {
+  align-items: center;
+  margin-left: 16px;
+}
+.navbar .navbar-right {
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+.navbar .navbar-right .group {
+  flex-direction: row-reverse;
+}
+.navbar .navbar-right .group > div {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.navbar .navbar-right .group .dropdown .dropdown-icon:hover::before {
+  background-color: var(--hover-secondary-button-bg);
+}
+.navbar .navbar-right .group .dropdown-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  padding: 8px;
+}
+.navbar .navbar-right .group .dropdown-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--secondary-button-bg);
+  border-radius: 50%;
+  transition: background-color 0.3s cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+.navbar .navbar-right .group .account {
+  padding: 5px;
+}
+.navbar .navbar-right .group .account .dropdown-icon {
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+.navbar .navbar-right .group .account img {
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.navbar .navbar-right .group .account span {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.navbar .navbar-right .group .account:hover::before {
+  opacity: 1;
+}
+.navbar .navbar-right .group .account::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--secondary-button-bg);
+  border-radius: 40px;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+.navbar .navbar-right .dropdown-menu {
+  position: absolute;
+  top: calc(var(--header-height) + 20px);
+  right: 10px;
+  width: 360px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+.navbar .navbar-middle {
+  left: 0;
+  right: 0;
+  justify-content: center;
+  z-index: 1;
+  background-color: var(--soc-header-bg);
+}
+.navbar ul {
+  padding-left: 110px;
+  padding-right: 110px;
+  flex-grow: 1;
+}
+.navbar ul li {
+  list-style: none;
+  max-width: 111.6px;
+  min-width: 50px;
+  flex-grow: 1;
+}
+.navbar ul li svg {
+  fill: var(--secondary-color);
+}
+.navbar ul li.active svg {
+  fill: var(--primary-button-bg);
+}
+.navbar ul li.active .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--primary-button-bg);
+}
+.navbar ul li:not(:first-child) {
+  margin-left: 8px;
+}
+.navbar .nav-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: inherit;
+  position: relative;
+}
+.navbar .nav-item .num__wrapper {
+  position: absolute;
+  color: #fff;
+  top: -8px;
+  left: 20px;
+  border-radius: 100px;
+  background-color: var(--notification-badge);
+}
+.navbar .nav-item .num__wrapper .num {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 0.825rem;
+}
+.navbar .nav-item:hover::before {
+  opacity: 1;
+}
+.navbar .nav-item::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  border-radius: var(--border-radius-bg);
+  background-color: var(--hover-overlay);
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+
+.scrollbar-line {
+  bottom: 0;
+  background-color: var(--border-color);
+}
+
+.scrollbar-track {
+  padding: 0 4px;
+  height: 100px;
+}
+
+.scrollbar-thumb {
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--scrollbar-thumb);
+}
+
+.sidebar__wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: sticky;
+  top: var(--header-height);
+  max-height: calc(100vh - var(--header-height));
+}
+.sidebar__wrapper .scrollbar {
+  width: 16px;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sidebar__wrapper::-webkit-scrollbar {
+  width: 0;
+}
+.sidebar__wrapper:hover .scrollbar {
+  opacity: 1;
+}
+
+.sidebar-block {
+  padding-bottom: 8px;
+}
+.sidebar-block .title {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.sidebar-block:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.shortcut__wrapper {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.shortcut {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+  border-radius: var(--border-radius-bg);
+  transition: all 0.1s ease-in-out;
+}
+.shortcut .icon {
+  margin: 8px 8px 8px 0;
+}
+.shortcut .icon img {
+  width: 36px;
+  height: 36px;
+}
+.shortcut .shortcut-link {
+  align-items: center;
+  padding: 0 8px;
+}
+.shortcut .shortcut-link span {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+}
+.shortcut.user img {
+  border-radius: 50%;
+}
+.shortcut.more .icon {
+  background-color: var(--secondary-button-bg);
+  border-radius: 50%;
+}
+.shortcut.more svg {
+  width: 28px;
+  height: 28px;
+}
+.shortcut:hover {
+  background-color: var(--hover-overlay);
+}
+
+.footer {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 0.8125rem;
+}
+.footer ul li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 8px;
+}
+.footer ul li a {
+  position: relative;
+}
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+.footer ul li a::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  right: -7px;
+  top: 8px;
+  background-color: var(--secondary-color);
+}
+
+.main-content {
+  display: flex;
+  min-height: 100vh;
+}
+.main-content .main {
+  flex-basis: 744px;
+  padding-left: 32px;
+  padding-right: 32px;
+}/*# sourceMappingURL=style.css.map */

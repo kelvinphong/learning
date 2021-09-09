@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <a class="logo" href="#"><img src="images/logo.png" alt=""></a>
+            <div class="toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="s-banner">
+        <div class="circle"></div>
+        <div class="content container">
+            <div class="text-box">
+                <h2>It's not just coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et provident corrupti molestias optio
+                    tempore doloribus corporis perspiciatis commodi minus quis eaque eos ea quas culpa neque dicta,
+                    similique accusamus voluptate?</p>
+                <a class="btn" href="#">Learn more</a>
+            </div>
+            <div class="img-box">
+                <img src="images/img1.png" class="starbucks" alt="">
+            </div>
+            <ul class="thumb">
+                <li><img src="images/img1.png" data-color="#017143" alt=""></li>
+                <li><img src="images/img2.png" data-color="#eb7495" alt=""></li>
+                <li><img src="images/img3.png" data-color="#d752b1" alt=""></li>
+            </ul>
+            <ul class="social">
+                <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+    <script type="text/javascript" defer>
+        const thumbItems = document.querySelectorAll(".thumb li"),
+            mainImg = document.querySelector(".starbucks"),
+            circleEle = document.querySelector(".circle"),
+            toggle = document.querySelector(".toggle");
+
+        thumbItems && thumbItems.forEach((item, index) => {
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                mainImg.src = e.target.src;
+                circleEle.style.background = e.target.getAttribute("data-color");
+            })
+        })
+
+        toggle && toggle.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            document.querySelector(".header").classList.toggle("show");
+        })
+    </script>
+</body>
+
+</html>

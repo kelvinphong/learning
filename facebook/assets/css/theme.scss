@@ -1,0 +1,44 @@
+:root {
+    --soc-header-bg: #242526;
+    --header-height: 56px;
+    --border-radius-bg: 8px;
+    --primary-button-bg: #2d88ff;
+    --secondary-color: #b0b3b8;
+    --secondary-button-bg: rgba(255,255,255,0.1);
+    --hover-secondary-button-bg: rgba(255,255,255,0.2);
+    --hover-overlay: rgba(255,255,255,0.1);
+    --notification-badge: #f02849;
+    --card-bg: #242526;
+    --border-color: #3e4042;
+    --scrollbar-thumb: rgba(255,254,255,0.3);
+}
+:root, .light-mode {
+    --soc-header-bg: #242526;
+    --primary-button-bg: #2d88ff;
+    --secondary-color: #b0b3b8;
+    --secondary-button-bg: rgba(255,255,255,0.1);
+    --hover-secondary-button-bg: rgba(255,255,255,0.3);
+    --hover-overlay: rgba(255,255,255,0.1);
+    --notification-badge: #f02849;
+    --card-bg: #242526;
+    --border-color: #3e4042;
+    --scrollbar-thumb: rgba(255,254,255,0.3);
+}
+a {text-decoration: none;}
+.d-flex {display: flex;}
+.m-0 {margin: 0 !important}
+.p-0 {padding: 0 !important}
+.h-100 {height: 100%;}
+.w-100 {width: 100%;}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.position-relative {position: relative;}
+.position-absolute {position: absolute;}
+.img-cover {width: 100%;height: 100%;object-fit: cover;}
+.c-white {color: #fff;}
+.f-500 {font-weight: 500;}
+.f-600 {font-weight: 600;}
+.secondary-color {color: var(--secondary-color);}
