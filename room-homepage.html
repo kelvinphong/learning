@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Homepage</title>
+    <link rel="stylesheet" href="assets/css/room-homepage.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <a href="#" class="logo">
+                <img class="lazyload" data-src="assets/images/room-homepage/logo.svg" alt="Logo">
+            </a>
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="banner">
+        <div class="banner">
+            <div class="banner-slider__wrapper">
+                <button class="slide-arrow slide-prev" data-index="-1">
+                    <img src="assets/images/room-homepage/icon-angle-left.svg" alt="">
+                </button>
+                <div class="banner-slider">
+                    <div class="slide-item">
+                        <div class="slide-img">
+                            <picture>
+                                <source media="(max-width: 480px)" data-srcset="assets/images/room-homepage/mobile-image-hero-1.jpg">
+                                <source media="(max-width: 1599.98px)" data-srcset="assets/images/room-homepage/desktop-image-hero-1.jpg">
+                                <source media="(min-width: 1600px)" data-srcset="assets/images/room-homepage/desktop-image-hero-1.jpg">
+                                <img class="img-cover lazyload" data-src="assets/images/room-homepage/desktop-image-hero-1.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="slide-text">
+                            <div class="title">Dicover innovative <br>ways to decorate</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minus, earum adipisci saepe, inventore culpa, qui consequatur praesentium voluptatibus dolores distinctio minima consectetur voluptate. Laboriosam fuga quod sapiente deserunt nihil?</p>
+                            <div class="slide-cta">
+                                <a class="cta" href="#" type="button">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="slide-img">
+                            <picture>
+                                <source media="(max-width: 480px)" data-srcset="assets/images/room-homepage/mobile-image-hero-2.jpg">
+                                <source media="(max-width: 1599.98px)" data-srcset="assets/images/room-homepage/desktop-image-hero-2.jpg">
+                                <source media="(min-width: 1600px)" data-srcset="assets/images/room-homepage/desktop-image-hero-2.jpg">
+                                <img class="img-cover lazyload" data-src="assets/images/room-homepage/desktop-image-hero-2.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="slide-text">
+                            <div class="title">We are available <br>all across the globe</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minus, earum adipisci saepe, inventore culpa, qui consequatur praesentium voluptatibus dolores distinctio minima consectetur voluptate. Laboriosam fuga quod sapiente deserunt nihil?</p>
+                            <div class="slide-cta">
+                                <a class="cta" href="#" type="button">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="slide-img">
+                            <picture>
+                                <source media="(max-width: 480px)" data-srcset="assets/images/room-homepage/mobile-image-hero-3.jpg">
+                                <source media="(max-width: 1599.98px)" data-srcset="assets/images/room-homepage/desktop-image-hero-3.jpg">
+                                <source media="(min-width: 1600px)" data-srcset="assets/images/room-homepage/desktop-image-hero-3.jpg">
+                                <img class="img-cover lazyload" data-src="assets/images/room-homepage/desktop-image-hero-3.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="slide-text">
+                            <div class="title">Manufactured with <br>the best materials</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minus, earum adipisci saepe, inventore culpa, qui consequatur praesentium voluptatibus dolores distinctio minima consectetur voluptate. Laboriosam fuga quod sapiente deserunt nihil?</p>
+                            <div class="slide-cta">
+                                <a class="cta" href="#" type="button">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slide-arrow slide-next" data-index="1">
+                    <img class="lazyload" data-src="assets/images/room-homepage/icon-angle-right.svg" alt="">
+                </button>
+            </div>
+            <div class="banner-about">
+                <div class="about-img">
+                    <img class="img-cover lazyload" data-src="assets/images/room-homepage/image-about-dark.jpg" alt="">
+                </div>
+                <div class="about-text">
+                    <div class="title">About our Forniture</div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium reiciendis corporis et. Voluptatibus, laborum atque ipsam non asperiores id dolorem velit similique ipsa quos architecto eveniet quisquam nisi voluptatem?</p>
+                </div>
+                <div class="about-img">
+                    <img class="lazyload img-cover" data-src="assets/images/room-homepage/image-about-light.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../local/assets/js/lazysizes.min.js" async></script>
+    <script src="../local/assets/js/ls.object-fit.min.js" async></script>
+    <script src="../local/assets/js/ls.parent-fit.min.js" async></script>
+    <script src="../local/assets/js/ls.bgset.min.js" async></script>
+    <script type="text/javascript" src="assets/js/room-homepage.js"></script>
+    <script type="text/javascript">
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        window.lazySizesConfig.customMedia = {
+            '--small': '(max-width: 480px)',
+            '--medium': '(max-width: 1599.98px)',
+            '--large': '(min-width: 1600px)',
+        };
+    </script>
+</body>
+</html>
