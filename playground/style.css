@@ -1,0 +1,294 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  --webkit-box-sizing: border-box;
+}
+
+body {
+  color: #1a2b5f;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #1a2b5f;
+  padding: 1.5rem 3rem;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+}
+
+.btn-border {
+  border: 1px solid currentColor;
+}
+
+.btn-rounded {
+  border-radius: 5rem;
+}
+
+.btn-primary {
+  background-image: linear-gradient(to bottom, #ffea7b 20%, #ffd07b);
+}
+.btn-primary.has-shadow {
+  box-shadow: 0 10px 35px -5px #ffc87a;
+}
+
+.container {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+.header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+}
+.header .menu > li {
+  list-style: none;
+  position: relative;
+}
+.header .menu > li a {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  transition: color 300ms ease;
+}
+.header .menu > li a.btn {
+  margin-left: 2rem;
+}
+.header .menu > li a:hover {
+  color: #ffdc7b;
+}
+.header .menu > li.has-child {
+  margin-right: 12px;
+}
+.header .menu > li.has-child::after {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(45deg);
+}
+.header .menu > li.active a {
+  position: relative;
+  font-weight: 600;
+}
+.header .menu > li.active a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 30px;
+  height: 2px;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* BANNER */
+.banner {
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  text-align: center;
+}
+.banner .banner-content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.banner .title {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.banner .description {
+  font-size: 1.8rem;
+  color: #6a7597;
+  padding-bottom: 4rem;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.banner .group-btn a {
+  font-size: 1.6rem;
+  margin: 0 2rem;
+}
+
+/* CATEGORY LIST */
+.category-list {
+  --columns: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 3rem;
+}
+.category-list .category-item {
+  border-radius: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+}
+.category-list .category-item img {
+  width: 100%;
+  height: 23rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.category-list .category-item .category-content {
+  padding-top: 3rem;
+}
+.category-list .category-item .category-content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.category-list .category-item .category-content .category-link {
+  color: #c6cad7;
+  font-size: 1.4rem;
+}
+.category-list .category-item:first-child {
+  box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+}
+.category-list .category-item:nth-child(2) {
+  box-shadow: 0 20px 35px -5px rgba(255, 112, 109, 0.25);
+}
+.category-list .category-item:nth-last-child(2) {
+  box-shadow: 0 20px 35px -5px rgba(133, 152, 255, 0.25);
+}
+.category-list .category-item:last-child {
+  box-shadow: 0 20px 35px -5px rgba(255, 200, 122, 0.25);
+}
+
+/* FEATURES */
+section#feature {
+  padding-top: 18rem;
+}
+
+.feature-item {
+  display: flex;
+}
+.feature-item .features-image {
+  border-radius: 20px;
+  max-width: 50%;
+  flex-shrink: 0;
+  padding-bottom: 15rem;
+}
+.feature-item .features-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feature-item .features-info {
+  font-size: 1.6rem;
+  flex: 1;
+}
+.feature-item .features-info h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.feature-item .features-info p {
+  color: #6a7597;
+}
+.feature-item .features-info .features-info__list {
+  padding-top: 5rem;
+}
+.feature-item .features-info .features-info__list > li {
+  font-weight: 500;
+  margin-bottom: 3rem;
+  transition: transform 300ms;
+}
+.feature-item .features-info .features-info__list > li:hover {
+  transform: translateY(-5px);
+}
+.feature-item .features-info .features-info__list.list-circle > li {
+  position: relative;
+  padding-left: 4rem;
+}
+.feature-item .features-info .features-info__list.list-circle > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: red;
+}
+.feature-item .features-info .features-info__list.list-circle > li:first-child::before {
+  background-color: #ff6adf;
+}
+.feature-item .features-info .features-info__list.list-circle > li:nth-child(2)::before {
+  background-color: #92fa3c;
+}
+.feature-item .features-info .features-info__list.list-circle > li:nth-child(3)::before {
+  background-color: #1ec0f4;
+}
+.feature-item .features-info .features-info__list.list-circle > li:last-child::before {
+  background-color: #ff899c;
+}
+.feature-item .features-info .features-info__list.list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 200px));
+  gap: 5rem;
+}
+.feature-item .features-info .features-info__btn {
+  padding-top: 1rem;
+}
+.feature-item .features-info .features-info__btn .btn {
+  padding: 1.5rem 4rem;
+  font-weight: 500;
+}
+.feature-item .features-info .features-info__best {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.feature-item:first-child .features-info__list {
+  padding-top: 5rem;
+}
+.feature-item:first-child .features-info__list > li {
+  text-decoration: underline;
+}
+.feature-item:nth-child(odd) .features-info {
+  padding-left: 10rem;
+}
+.feature-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.feature-item:nth-child(even) .features-info {
+  padding-right: 10rem;
+}/*# sourceMappingURL=style.css.map */

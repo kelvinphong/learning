@@ -1,0 +1,125 @@
+.wrapper {
+  padding: 2rem;
+}
+
+.loading {
+  margin-bottom: 2rem;
+}
+
+.loading-ring > div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: var(--color);
+  border-bottom-color: var(--color);
+  background-color: transparent;
+  transform: rotate(0);
+  -webkit-animation: loading-ring 2s infinite linear;
+          animation: loading-ring 2s infinite linear;
+}
+
+.loading-tiktok {
+  position: relative;
+  min-height: 50px;
+}
+.loading-tiktok > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.loading-tiktok > div:nth-child(1), .loading-tiktok > div:nth-child(3) {
+  background-color: #FE157A;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+.loading-tiktok > div:nth-child(1) {
+  -webkit-animation-name: loading-tiktok;
+          animation-name: loading-tiktok;
+}
+.loading-tiktok > div:nth-child(2) {
+  background-color: #3CFFFF;
+  -webkit-animation-name: loading-tiktok;
+          animation-name: loading-tiktok;
+}
+.loading-tiktok > div:nth-child(3) {
+  -webkit-animation-name: loading-tiktok2;
+          animation-name: loading-tiktok2;
+}
+
+@-webkit-keyframes loading-ring {
+  from {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes loading-ring {
+  from {
+    transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes loading-tiktok {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes loading-tiktok {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes loading-tiktok2 {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  49.99% {
+    opacity: 1;
+    transform: translateX(60px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+@keyframes loading-tiktok2 {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  49.99% {
+    opacity: 1;
+    transform: translateX(60px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=loading.css.map */
